@@ -1,0 +1,1203 @@
+/* =========================
+   COMPONENTS
+========================= */
+
+
+:root {
+  --nav-color: #a4164a;
+  --nav-width: 12vw;
+}
+
+/* --- NAV BAR --- */
+
+/* --- 1. VERSIONE MOBILE (Default) --- */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: var(--nav-width);
+  /* Larghezza ridotta per mobile */
+  height: 100%;
+  /* Tutta l'altezza dello schermo */
+  display: flex;
+  flex-direction: column;
+  /* Elementi in verticale */
+  justify-content: center;
+  align-items: center;
+
+
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+
+
+
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10vw;
+  text-decoration: none;
+
+  list-style: none;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 0%;
+  background-color: var(--nav-color);
+  transition: height 0.2s, background-color 0.2s;
+}
+
+.nav-links li.active::before {
+  height: 100%;
+}
+
+.nav-icon {
+  width: 30px;
+  height: 30px;
+  padding-top: 5px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.nav-icon:hover {
+  transform: scale(1.1);
+
+}
+
+
+
+
+
+/* --- 2. VERSIONE DESKTOP (Media Query) --- */
+@media (min-width: 820px) {
+  .navbar {
+    width: 100%;
+    /* Torna a tutta larghezza */
+    height: 60px;
+    /* Altezza classica orizzontale */
+    flex-direction: row;
+    /* Elementi in orizzontale */
+    top: 0;
+    left: 0;
+    /* La agganciamo anche a sinistra */
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    /* Link in orizzontale */
+    display: flex;
+    align-items: center;
+    gap: 10vw;
+  }
+
+  .nav-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+
+
+/* --- SECTIONS --- */
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+
+  /* ogni sezione occupa tutta la viewport per uno snap netto */
+}
+
+@media (min-width: 820px) {
+  section {
+    padding: 0;
+    /* Rimuove il padding su desktop */
+  }
+}
+
+.home_background {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0rem;
+  width: 100%;
+  height: 100vh;
+
+  background-color: #161a1d;
+  border: solid 1px black;
+}
+
+.about_background {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  gap: 2rem;
+
+  width: 100%;
+  height: 100vh;
+  background-color: #a4161a;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  border-bottom: 5px solid;
+  /* Definiamo lo spessore */
+  border-image-source: linear-gradient(to right, black, #a4161a);
+  /* Il gradiente */
+  border-image-slice: 1;
+  /* Fondamentale per far apparire il bordo */
+  border-top: 5px solid;
+  /* Definiamo lo spessore */
+
+}
+
+
+
+.music {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+
+.ep-cinematic {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  flex-shrink: 0;
+  background-image: url("../images/IMG_4204.JPG");
+  ;
+  filter: brightness(1.5);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+
+  align-items: start;
+  padding: 5%;
+
+}
+
+
+
+
+
+
+
+.ep-content {
+  position: relative;
+  z-index: 2;
+  max-width: calc(100% - 12vw);
+  color: white;
+}
+
+.ep-content p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.ep-header {
+  max-width: calc(100% - 12vw);
+}
+
+.ep-header h1 {
+  font-size: 3.3rem;
+  letter-spacing: -2px;
+
+  line-height: 5rem;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+.ep-tracks {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.liquid-player {
+  position: relative;
+  width: 80%;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: border-color 0.3s;
+
+  touch-action: pan-y;
+  /* Impedisce al browser di gestire il tocco (niente scroll) */
+  user-select: none;
+  /* Impedisce la selezione del testo */
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  /* Impedisce il popup "salva immagine" su iOS */
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: rgba(164, 22, 26, 0.7);
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  pointer-events: none;
+  /* Importante: il click deve passare al padre */
+
+}
+
+.player-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  /* Assicura che i click passino al genitore per il play/pause */
+}
+
+.track-title {
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.track-time {
+  opacity: 0;
+  font-family: monospace;
+  transition: opacity 0.4s;
+  ;
+}
+
+.liquid-player:active {
+  transform: scale(0.98);
+  filter: brightness(1.2);
+  transition: transform 0.1s;
+}
+
+.liquid-player.is-playing .track-time {
+  opacity: 1;
+}
+
+.liquid-player:hover {
+  border-color: rgba(164, 22, 26, 0.5);
+}
+
+.singles-section {
+  background-color: black;
+  flex-grow: 1;
+  padding: 20px 5%;
+}
+
+.singles-section h1 {
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+  line-height: 3.5rem;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.singles-section h3 {
+  font-size: 1rem;
+  letter-spacing: -1px;
+  line-height: 1.5rem;
+  text-align: left;
+  text-transform: uppercase;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.singles-section p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+
+.play-button-circle {
+  display: inline-block;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #dd0e1fc0;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  box-shadow: #666 -2px -2px 5px;
+  /* Scegli il tuo colore */
+  color: white;
+  text-decoration: none;
+  filter: blur(0px);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.play-button-circle:active {
+  transform: scale(0.9);
+  background-color: #dd0e1f;
+  filter: blur(0.2px);
+}
+
+
+.singles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+
+  padding-left: 2vw;
+  padding-right: 5vw;
+  margin-top: 40px;
+}
+
+.single-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #222;
+  background-color: #111;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.track-cover {
+  width: 30%;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+}
+
+.track-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.track-name {
+  color: white;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.track-genre {
+  color: #666;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+@media (min-width: 860px) {
+
+
+  .ep-cinematic {
+    justify-content: center;
+  }
+
+  .ep-content p {
+
+    text-align: center;
+  }
+
+  .ep-header {
+    font-size: 2rem;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .ep-header h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 4.5rem;
+    text-align: center;
+    text-transform: uppercase;
+
+
+  }
+
+  .liquid-player {
+    width: 100%;
+    height: 100px;
+  }
+
+  .track-title {
+    font-size: 1.2rem;
+  }
+
+
+
+  .single-item {
+
+    background-color: black;
+    justify-content: center;
+  }
+
+  .singles-section h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .track-cover {
+    width: 15%;
+  }
+
+  .singles-section h3 {
+    padding-left: 20px;
+    font-size: 2rem;
+  }
+
+  .singles-section p {
+    padding-left: 20px;
+    font-size: 1.5rem;
+  }
+
+  .play-button-circle {
+    margin-left: 20px;
+    font-size: 1.2rem;
+  }
+}
+
+
+
+.contact_background {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+
+
+  padding-left: 5%;
+  padding-top: 5%;
+  gap: 10px;
+  padding-right: var(--nav-width);
+  background-color: #161a1d;
+  border: solid 1px black;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-left {
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+
+}
+
+.contact-right {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  border-left: 1 px solid white;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.info-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  color: #a4161a;
+  font-weight: bold;
+}
+
+.info-value {
+  font-size: 1.1rem;
+  color: white;
+}
+
+.availability-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #00ff88;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ff88;
+  animation: pulse-green 2s infinite;
+
+}
+
+@keyframes pulse-green {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.4);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+
+
+  gap: 2rem;
+  padding-right: var(--nav-width);
+}
+
+.mail-link {
+
+  color: #999;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  font-size: clamp(0.7rem, 2vw, 1.5rem);
+  letter-spacing: 2px;
+  padding: 10px 15px;
+  border: 1px solid #a4161a;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.mail-link:hover {
+  color: #a4161a;
+  border-color: white;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+
+  flex-wrap: wrap;
+}
+
+.social-item {
+
+  color: #999;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  padding: 10px 15px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.social-item:hover {
+  color: white;
+  border-color: #a4161a;
+  background-color: rgba(164, 22, 26, 0.1);
+  transform: translateY(-3px);
+}
+
+.cv-link {
+  font-size: 1.1rem;
+  color: white;
+  text-decoration: none;
+  width: 60%;
+  border-bottom: 1px solid #a4161a;
+  /* Sottolineatura rossa sottile */
+
+  padding-bottom: 2px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.cv-link:hover {
+  color: #a4161a;
+  border-color: white;
+  transform: translateX(5px);
+  /* Piccolo movimento fluido verso destra */
+}
+
+.cv-link .arrow {
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+@media (min-width: 860px) {
+
+  .contact_background {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    padding-bottom: 5%;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-left {
+    padding-bottom: 80px;
+
+  }
+
+  .contact-title {
+    font-size: 3rem;
+  }
+
+  .sub-title {
+    font-size: 1.5rem;
+  }
+
+  .mail-link {
+    text-align: center;
+  }
+
+  .contact-methods {
+
+    gap: 60px;
+
+  }
+
+  .social-links {
+    gap: 20px;
+  }
+
+  .social-item {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+  }
+
+  .contact-right {
+    gap: 20px;
+    padding-left: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-left: 1px solid white;
+  }
+
+  .info-label {
+    font-size: 1rem;
+    padding-bottom: 1px;
+  }
+
+}
+
+.home_image_container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.made-by {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+@media (min-width: 860px) {
+
+  .made-by {
+    position: absolute;
+    top: auto;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    z-index: 10;
+
+  }
+
+}
+
+.home_image_container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+
+  filter: brightness(60%) blur(0.5px);
+}
+
+.home_content {
+  padding-top: 10vh;
+  padding-right: var(--nav-width);
+  padding-left: var(--nav-width);
+  color: white;
+  z-index: 2;
+}
+
+.home_content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  line-height: 50px;
+
+}
+
+.home_content p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+
+}
+
+/* Stile del Bottone */
+.btn_home {
+  display: inline-block;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+  background-color: #dd0e1fc0;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  /* Scegli il tuo colore */
+  color: white;
+  text-decoration: none;
+  filter: blur(0px);
+  border: 2px solid rgb(41, 41, 41);
+  border-radius: 10px 10px 10px 10px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.btn_home:hover {
+  transform: scale(1.1);
+  background-color: #dd0e1f;
+  filter: blur(0.2px);
+
+}
+
+
+.title {
+  text-align: left;
+  font-size: 2rem;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: var(--nav-width);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+
+
+}
+
+.about-text {
+  font-size: 1rem;
+  color: white;
+  text-align: justify;
+  text-justify: inter-word;
+  /* Distribuisce lo spazio tra le parole in modo intelligente */
+  hyphens: auto;
+  /* Spezza le parole lunghe a fine riga (fondamentale per il justify) */
+  padding-top: 5%;
+  padding-left: 5%;
+  max-width: 80%;
+  /* Regola d'oro: mai superare i 70-80 caratteri per riga */
+
+
+}
+
+@media (min-width: 820px) {
+
+  .about-text {
+    max-width: 800px;
+  }
+}
+
+.title-sound {
+  font-size: 2rem;
+  text-align: left;
+  padding: 10px;
+}
+
+
+.curtain-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #4b0000;
+
+
+}
+
+.sound_background {
+  position: absolute;
+
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, rgba(20, 20, 20, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  backdrop-filter: blur(15px);
+  /* Effetto vetro sfocato */
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+
+
+
+}
+
+.curtain-container.is-open .sound_background {
+  opacity: 1;
+}
+
+.curtain-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+
+
+}
+
+.curtain-overlay.pointer-none {
+  pointer-events: none;
+}
+
+.curtain-panel {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #a4161a;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  background-blend-mode: multiply;
+  transition: transform 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+}
+
+.panel-left {
+  left: 0;
+  transform-origin: left;
+}
+
+.panel-right {
+  right: 0;
+  transform-origin: right;
+}
+
+.curtain-container.is-open .panel-left {
+  transform: translateX(-100%);
+}
+
+.curtain-container.is-open .panel-right {
+  transform: translateX(100%);
+}
+
+.curtain-interface {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  text-align: center;
+  color: white;
+  transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.curtain-container.is-open .curtain-interface {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.headphones-icon {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+.cta-button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: white;
+  color: #a4161a;
+}
+
+@keyframes pulse {
+
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+}
+
+.content-wrapper h2 {
+  font-size: 2rem;
+}
+
+
+.sound-text {
+  font-size: 1.5rem;
+  text-align: left;
+  padding-left: 5%;
+}
+
+
+
+
+.reel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+
+  max-width: calc(100% - var(--nav-width));
+  padding: 5%;
+}
+
+.reel-card {
+  background: rgba(255, 255, 255, 0.03);
+  /* Sfondo quasi trasparente */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Bordino sottile elegante */
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+
+.reel-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: #a4161a;
+  /* Il tuo rosso */
+  box-shadow: 0 20px 40px rgba(164, 22, 26, 0.2);
+}
+
+.reel-video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.reel-thumb {
+  width: 100%;
+  /* Aggiungi questo */
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+  /* Immagine al livello più basso */
+}
+
+.reel-card:hover .reel-thumb {
+  opacity: 1;
+}
+
+.reel-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.4);
+  /* Sfondo scuro per far risaltare il bianco */
+  opacity: 1;
+  /* CAMBIA DA 0 A 1: Così l'utente vede subito che è un video */
+  transition: all 0.3s ease;
+  z-index: 5;
+  /* Sopra l'immagine */
+}
+
+.reel-card:hover .reel-overlay {
+  opacity: 1;
+}
+
+.reel-card:hover .play-icon {
+  color: #a4161a;
+  transform: scale(1.1);
+}
+
+.play-icon {
+  pointer-events: none;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 4. Gestione dello stato "In Riproduzione" */
+/* Quando aggiungiamo la classe .is-playing tramite JS, nascondiamo tutto il resto */
+.reel-card.is-playing .reel-overlay,
+.reel-card.is-playing .reel-thumb {
+  display: none !important;
+}
+
+.reel-card.is-playing .vimeo-wrapper {
+  display: block !important;
+}
+
+/* Informazioni Testuali */
+.reel-info {
+  padding: 20px;
+}
+
+.reel-category {
+  font-size: 0.7rem;
+  color: #a4161a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.reel-title {
+  margin-top: 8px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.vimeo-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: none;
+}
+
+.vimeo-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (min-width: 860px) {
+
+  .content-wrapper h2 {
+    padding-top: 60px;
+    font-size: 3rem;
+  }
+
+  .sound-text {
+    font-size: 2rem;
+    text-align: center;
+    padding-left: 0;
+    padding-top: 10px;
+  }
+
+  .reel-grid {
+    max-width: 100%;
+  }
+}
+
+
+@media (min-width:820px) {
+
+  .about_background {
+    padding-bottom: 5%;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 3rem;
+    padding: 0px;
+
+    text-align: center;
+  }
+
+  .about-text {
+    font-size: 1.5rem;
+  }
+
+}
+
+;
