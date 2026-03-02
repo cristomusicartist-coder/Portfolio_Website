@@ -371,6 +371,26 @@ section {
   transition: transform 0.3s ease;
 }
 
+.play-button-circle:hover {
+  transform: scale(1.1);
+}
+.play-button-circle-unactive {
+  display: inline-block;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #666;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  box-shadow: #666 -2px -2px 5px;
+  /* Scegli il tuo colore */
+  color: white;
+  text-decoration: none;
+  filter: blur(0px);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
 .play-button-circle:active {
   transform: scale(0.9);
   background-color: #dd0e1f;
@@ -463,7 +483,7 @@ section {
   .single-item {
 
     background-color: black;
-    justify-content: center;
+    justify-content: left;
   }
 
   .singles-section h1 {
@@ -1114,6 +1134,14 @@ section {
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+.work-in-progress {
+  pointer-events: none;
+  font-size: 1rem;
+  color: white;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+} 
+
+
 /* 4. Gestione dello stato "In Riproduzione" */
 /* Quando aggiungiamo la classe .is-playing tramite JS, nascondiamo tutto il resto */
 .reel-card.is-playing .reel-overlay,
@@ -1131,17 +1159,36 @@ section {
 }
 
 .reel-category {
+  display: flex;
   font-size: 0.7rem;
   color: #a4161a;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
+  justify-content: left;
 }
 
+
+
 .reel-title {
+  display: flex;
   margin-top: 8px;
   font-size: 1.2rem;
   color: white;
+  justify-content: left;
+}
+
+
+@media (min-width: 820px) {
+  .reel-category {
+    font-size: 1rem;
+    justify-content: center;
+  }
+
+  .reel-title {
+    font-size: 2rem;
+    justify-content: center;
+  }
 }
 
 .vimeo-wrapper {
