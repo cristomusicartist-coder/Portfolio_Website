@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="22.938251mm"
+   width="22.93825mm"
    height="22.132084mm"
-   viewBox="0 0 22.938251 22.132084"
+   viewBox="0 0 22.938249 22.132084"
    version="1.1"
    id="svg1"
    xmlns="http://www.w3.org/2000/svg"
@@ -14,40 +14,36 @@
   <g
      id="layer4"
      transform="translate(-28.16854,-15.694168)">
-    <g
-       id="g248"
-       transform="matrix(3.3782701,0,0,3.3782701,-87.657803,-909.29831)">
-      <rect
-         style="fill:#ff000f;fill-opacity:1;stroke:#191919;stroke-width:0.19928;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-         id="rect104-9-87-3-6-4"
-         width="4.0486307"
-         height="4.2819834"
-         x="36.927105"
-         y="273.90619" />
-      <rect
-         style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-         id="rect104-6-3-56-3"
-         width="2.4318004"
-         height="6.3495612"
-         x="34.385696"
-         y="273.90829" />
-      <rect
-         style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.199767;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-         id="rect104-0-39-5-9"
-         width="4.0929098"
-         height="2.0006032"
-         x="36.882843"
-         y="278.25699" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:0;font-family:Dubai;-inkscape-font-specification:'Dubai, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;fill:#191919;fill-opacity:1;stroke:#191919;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-         x="34.639877"
-         y="279.71121"
-         id="text87-5-05-2"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Dubai;-inkscape-font-specification:'Dubai, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#191919;fill-opacity:1;stroke:#191919;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
-           x="34.639877"
-           y="279.71121"
-           id="tspan88-3-9-9">M</tspan></text>
-    </g>
+    <rect
+       style="fill:#ff000f;fill-opacity:1;stroke:#191919;stroke-width:0.673222;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect104-9-87-3-6-4"
+       width="13.677368"
+       height="14.465696"
+       x="37.09193"
+       y="16.030779" />
+    <rect
+       style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.675654;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect104-6-3-56-3"
+       width="8.2152786"
+       height="21.450533"
+       x="28.506367"
+       y="16.037891" />
+    <rect
+       style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.674867;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect104-0-39-5-9"
+       width="13.826955"
+       height="6.7585778"
+       x="36.942402"
+       y="30.728954" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.8356px;line-height:0;font-family:Dubai;-inkscape-font-specification:'Dubai, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;fill:#191919;fill-opacity:1;stroke:#191919;stroke-width:0.337827;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       x="29.365059"
+       y="35.641716"
+       id="text87-5-05-2"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.8356px;font-family:Dubai;-inkscape-font-specification:'Dubai, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#191919;fill-opacity:1;stroke:#191919;stroke-width:0.337827;stroke-dasharray:none;stroke-opacity:1"
+         x="29.365059"
+         y="35.641716"
+         id="tspan88-3-9-9">M</tspan></text>
   </g>
 </svg>

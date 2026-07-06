@@ -13,156 +13,148 @@
      id="defs1" />
   <g
      id="layer4"
-     transform="translate(-114.06347,-8.6540047)">
-    <g
-       id="g250"
-       transform="matrix(3.4565259,0,0,3.4565259,-69.196746,-915.25727)">
-      <rect
-         style="fill:#191919;fill-opacity:1;stroke:#191919;stroke-width:0.0449563;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
-         id="rect244"
-         width="21.427319"
-         height="11.169924"
-         x="53.096279"
-         y="267.30692"
-         transform="matrix(0.99999998,1.9459409e-4,-1.9816662e-4,0.99999998,0,0)" />
-      <rect
-         style="fill:#ff000f;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-         id="rect104-9-87-3-6"
-         width="4.0779662"
-         height="4.2589011"
-         x="55.750065"
-         y="267.48883" />
-      <rect
-         style="fill:#ffe5ec;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke fill markers"
-         id="rect104-0-39-5"
-         width="4.0726404"
-         height="1.9684248"
-         x="55.770679"
-         y="271.84396" />
-      <g
-         id="g247"
-         style="stroke:#191919;stroke-width:0.2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1">
-        <rect
-           style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-           id="rect104-6-18"
-           width="2.4230454"
-           height="4.3845778"
-           x="53.253384"
-           y="273.90796" />
-        <rect
-           style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-           id="rect104-6-2-1"
-           width="2.3099101"
-           height="3.9303162"
-           x="71.958992"
-           y="274.36221" />
-        <rect
-           style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.199239;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-           id="rect104-6-2-8-8"
-           width="1.6727904"
-           height="2.1262727"
-           x="70.188332"
-           y="274.35165" />
-        <rect
-           style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-           id="rect104-6-3-56"
-           width="2.4117637"
-           height="6.3194985"
-           x="53.253384"
-           y="267.48825" />
-        <rect
-           style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-           id="rect104-0-39-67-9"
-           width="4.0904965"
-           height="2.5763428"
-           x="55.762253"
-           y="273.91031" />
-        <rect
-           style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.199912;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-           id="rect104-0-39-67-7-2"
-           width="16.095795"
-           height="1.7255871"
-           x="55.761364"
-           y="276.56702" />
-        <rect
-           style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-           id="rect104-9-7-5-6"
-           width="8.3776636"
-           height="2.071202"
-           x="65.891251"
-           y="267.48117" />
-        <rect
-           style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.2;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-           id="rect104-9-8-8-52"
-           width="5.8857875"
-           height="1.6406553"
-           x="59.927471"
-           y="267.49533" />
-        <rect
-           style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.199701;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-           id="rect104-9-8-3-2-3"
-           width="4.2059569"
-           height="6.8357186"
-           x="65.892136"
-           y="269.63223" />
-        <rect
-           style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.199335;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-           id="rect104-9-8-3-5-3-21"
-           width="4.0552192"
-           height="4.6338024"
-           x="70.214035"
-           y="269.63242" />
-        <rect
-           style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.199717;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
-           id="rect238-9-2"
-           width="5.884407"
-           height="7.2615099"
-           x="59.932037"
-           y="269.20642" />
-      </g>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:0.967136px;line-height:0;font-family:Dubai;-inkscape-font-specification:'Dubai, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-0.0240777px;writing-mode:lr-tb;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:#191919;stroke-width:0.01;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-         x="57.357121"
-         y="277.7182"
-         id="text104-8-2"><tspan
-           id="tspan104-1-8"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:0.967136px;font-family:Dubai;-inkscape-font-specification:'Dubai, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-0.0240777px;fill:#ffffff;fill-opacity:1;stroke:#191919;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1"
-           x="57.357121"
-           y="277.7182"
-           dx="0 0.026551066"><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80259px;font-family:Dubai;-inkscape-font-specification:Dubai;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-0.0240777px;fill:#ff0000;fill-opacity:1;stroke:#191919;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1"
+     transform="translate(-114.06347,-8.6539966)">
+    <rect
+       style="fill:#191919;fill-opacity:1;stroke:#191919;stroke-width:0.155393;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect244"
+       width="74.064079"
+       height="38.609131"
+       x="114.15054"
+       y="8.7094803"
+       transform="matrix(0.99999998,1.9459409e-4,-1.9816662e-4,0.99999998,0,0)" />
+    <rect
+       style="fill:#ff000f;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect104-9-87-3-6"
+       width="14.095595"
+       height="14.721002"
+       x="123.5048"
+       y="9.3248005" />
+    <rect
+       style="fill:#ffe5ec;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke fill markers"
+       id="rect104-0-39-5"
+       width="14.077188"
+       height="6.8039112"
+       x="123.57605"
+       y="24.378431" />
+    <rect
+       style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.691305;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect104-6-18"
+       width="8.3753195"
+       height="15.155407"
+       x="114.87495"
+       y="31.512684" />
+    <rect
+       style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.691305;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect104-6-2-1"
+       width="7.9842639"
+       height="13.585239"
+       x="179.53137"
+       y="33.082825" />
+    <rect
+       style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.688675;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect104-6-2-8-8"
+       width="5.7820435"
+       height="7.3495164"
+       x="173.41104"
+       y="33.046329" />
+    <rect
+       style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.691305;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect104-6-3-56"
+       width="8.3363237"
+       height="21.84351"
+       x="114.87495"
+       y="9.3227968" />
+    <rect
+       style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.691305;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect104-0-39-67-9"
+       width="14.138907"
+       height="8.9051952"
+       x="123.54693"
+       y="31.520807" />
+    <rect
+       style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.691001;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect104-0-39-67-7-2"
+       width="55.635532"
+       height="5.9645367"
+       x="123.54385"
+       y="40.703785" />
+    <rect
+       style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.691305;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect104-9-7-5-6"
+       width="28.957611"
+       height="7.1591635"
+       x="158.55807"
+       y="9.2983246" />
+    <rect
+       style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.691305;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect104-9-8-8-52"
+       width="20.344378"
+       height="5.6709676"
+       x="137.94411"
+       y="9.3472691" />
+    <rect
+       style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.690272;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect104-9-8-3-2-3"
+       width="14.537999"
+       height="23.627838"
+       x="158.56113"
+       y="16.733526" />
+    <rect
+       style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.689007;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect104-9-8-3-5-3-21"
+       width="14.01697"
+       height="16.016857"
+       x="173.49988"
+       y="16.734159" />
+    <rect
+       style="fill:#ffe5ec;fill-opacity:1;stroke:#191919;stroke-width:0.690327;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect238-9-2"
+       width="20.339605"
+       height="25.099598"
+       x="137.9599"
+       y="15.261696" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.34293px;line-height:0;font-family:Dubai;-inkscape-font-specification:'Dubai, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-0.0832252px;writing-mode:lr-tb;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:#191919;stroke-width:0.0345653;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       x="129.05963"
+       y="44.682884"
+       id="text104-8-2"><tspan
+         id="tspan104-1-8"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.34293px;font-family:Dubai;-inkscape-font-specification:'Dubai, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-0.0832252px;fill:#ffffff;fill-opacity:1;stroke:#191919;stroke-width:0.0345653;stroke-dasharray:none;stroke-opacity:1"
+         x="129.05963"
+         y="44.682884"
+         dx="0 0.091774449"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.77417px;font-family:Dubai;-inkscape-font-specification:Dubai;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-0.0832252px;fill:#ff0000;fill-opacity:1;stroke:#191919;stroke-width:0.0345653;stroke-dasharray:none;stroke-opacity:1"
    id="tspan113-6-88">&lt;</tspan><tspan
-   style="font-size:0.80259px;letter-spacing:-0.0240777px;stroke:#191919;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1"
+   style="font-size:2.77417px;letter-spacing:-0.0832252px;stroke:#191919;stroke-width:0.0345653;stroke-dasharray:none;stroke-opacity:1"
    id="tspan236-7"> </tspan><tspan
-   style="font-size:1.16056px;letter-spacing:-0.0240777px;stroke:#191919;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1"
+   style="font-size:4.01151px;letter-spacing:-0.0832252px;stroke:#191919;stroke-width:0.0345653;stroke-dasharray:none;stroke-opacity:1"
    id="tspan237-4"><tspan
-     style="fill:#191919;fill-opacity:1;stroke:#191919;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:#191919;fill-opacity:1;stroke:#191919;stroke-width:0.0345653;stroke-dasharray:none;stroke-opacity:1"
      id="tspan245">Interactive Audio Systems</tspan></tspan> <tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80259px;font-family:Dubai;-inkscape-font-specification:Dubai;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-0.0240777px;fill:#ff0000;fill-opacity:1;stroke:#191919;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.77417px;font-family:Dubai;-inkscape-font-specification:Dubai;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-0.0832252px;fill:#ff0000;fill-opacity:1;stroke:#191919;stroke-width:0.0345653;stroke-dasharray:none;stroke-opacity:1"
    id="tspan112-4-0">/&gt;</tspan></tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:0;font-family:Dubai;-inkscape-font-specification:'Dubai, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;fill:#191919;fill-opacity:1;stroke:#191919;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-         x="53.507565"
-         y="273.29117"
-         id="text87-5-05"><tspan
-           id="tspan87-1-9"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Dubai;-inkscape-font-specification:'Dubai, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#191919;fill-opacity:1;stroke:#191919;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
-           x="53.507565"
-           y="273.29117">Musaic</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Dubai;-inkscape-font-specification:'Dubai, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#191919;fill-opacity:1;stroke:#191919;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
-           x="53.507565"
-           y="273.29117"
-           id="tspan88-3-9" /></text>
-      <path
-         style="fill:#ffffff;fill-opacity:0;stroke:#191919;stroke-width:0.0442822;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
-         d="m 53.203331,276.04367 c 0,0 0.275199,2.36392 1.343802,1.26079 0.707465,-0.73031 1.043753,-3.73529 2.547731,-2.75105 1.13236,0.74104 5.60481,3.76949 5.63552,-0.79936 0.0305,-4.54061 1.32956,-6.21011 2.18489,-6.13262 1.46691,0.13287 1.66555,2.77629 6.54205,0.28765 2.32408,-1.18606 2.83207,6.45584 2.83207,6.45584"
-         id="path235-5" />
-      <path
-         style="fill:#191919;fill-opacity:1;stroke:#191919;stroke-width:0.01;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
-         id="path246"
-         d="m 69.760894,268.72231 a 0.44080514,0.44080514 0 0 1 0.596043,0.18216 0.44080514,0.44080514 0 0 1 -0.181901,0.59612 0.44080514,0.44080514 0 0 1 -0.596201,-0.18164 0.44080514,0.44080514 0 0 1 0.181384,-0.59628" />
-    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.3877px;line-height:0;font-family:Dubai;-inkscape-font-specification:'Dubai, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;fill:#191919;fill-opacity:1;stroke:#191919;stroke-width:0.345653;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       x="115.75354"
+       y="29.380732"
+       id="text87-5-05"><tspan
+         id="tspan87-1-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.3877px;font-family:Dubai;-inkscape-font-specification:'Dubai, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#191919;fill-opacity:1;stroke:#191919;stroke-width:0.345653;stroke-dasharray:none;stroke-opacity:1"
+         x="115.75354"
+         y="29.380732">Musaic</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.3877px;font-family:Dubai;-inkscape-font-specification:'Dubai, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#191919;fill-opacity:1;stroke:#191919;stroke-width:0.345653;stroke-dasharray:none;stroke-opacity:1"
+         x="115.75354"
+         y="29.380732"
+         id="tspan88-3-9" /></text>
+    <path
+       style="fill:#ffffff;fill-opacity:0;stroke:#191919;stroke-width:0.153063;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 114.70195,38.894825 c 0,0 0.95123,8.170951 4.64488,4.357953 2.44537,-2.524335 3.60776,-12.911126 8.8063,-9.509075 3.91403,2.561424 19.37317,13.029339 19.47932,-2.763009 0.10543,-15.694736 4.59566,-21.465406 7.55213,-21.1975598 5.07041,0.4592688 5.75702,9.5963178 22.61277,0.9942698 8.03324,-4.0996472 9.78912,22.314778 9.78912,22.314778"
+       id="path235-5" />
+    <path
+       style="fill:#191919;fill-opacity:1;stroke:#191919;stroke-width:0.0345653;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path246"
+       d="m 171.9336,13.588358 a 1.5236543,1.5236543 0 0 1 2.06023,0.629641 1.5236543,1.5236543 0 0 1 -0.62874,2.060511 1.5236543,1.5236543 0 0 1 -2.06079,-0.627854 1.5236543,1.5236543 0 0 1 0.62696,-2.061056" />
   </g>
 </svg>
