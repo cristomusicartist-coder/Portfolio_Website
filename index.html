@@ -1,343 +1,287 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Cristian Giordano — Project H Portfolio</title>
-  <meta name="description" content="Technical Sound Designer & Composer developing Project H, a Unity/Wwise psychological horror prototype where sound, stress, breathing and light become gameplay systems." />
-
+  <title>Musaic | Interactive Audio Systems</title>
+  <meta name="description" content="Musaic by Cristian Giordano — interactive audio systems, technical sound design, Unity, Wwise and Project H." />
+  <link rel="preload" href="style.css" as="style" />
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <nav class="site-nav" aria-label="Primary navigation">
-    <ul class="nav-list">
-      <li>
-        <a class="nav-link" href="#home" aria-label="Project H">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V4h2.4v6.6h11.2V4H20v16h-2.4v-7.1H6.4V20H4Z" /></svg>
-          <span>Project H</span>
-        </a>
-      </li>
-      <li>
-        <a class="nav-link" href="#breakdown" aria-label="Breakdown">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.2v13.6L19 12 8 5.2Z" /></svg>
-          <span>Breakdown</span>
-        </a>
-      </li>
-      <li>
-        <a class="nav-link" href="#systems" aria-label="Systems">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a3 3 0 0 1 2.83 2H19v4.17A3 3 0 1 1 17 12a2.97 2.97 0 0 1 .78-2H14.6l-1.5 4.5A3 3 0 1 1 10.9 14l1.5-4.5A3 3 0 0 1 9.17 7H6.22A3 3 0 1 1 6 5h3.17A3 3 0 0 1 12 3Zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2ZM4 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm16 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm-10 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z" /></svg>
-          <span>Systems</span>
-        </a>
-      </li>
-      <li>
-        <a class="nav-link" href="#loop" aria-label="Memory investigation loop">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 8.49 12H18a6.7 6.7 0 1 1-.75-6.32L14 12h8V4l-3.03 3.03A8.98 8.98 0 0 0 12 3Zm-1 4h2v5.2l4 2.4-1 1.73-5-3V7Z" /></svg>
-          <span>Loop</span>
-        </a>
-      </li>
-      <li>
-        <a class="nav-link" href="#music" aria-label="Music Composition">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 3v12.5A3.5 3.5 0 1 1 16 12.34V7H9v10.5A3.5 3.5 0 1 1 7 14.34V3h11ZM5.5 17A1.5 1.5 0 1 0 5.5 20 1.5 1.5 0 0 0 5.5 17Zm11-2A1.5 1.5 0 1 0 16.5 18 1.5 1.5 0 0 0 16.5 15ZM9 5v0h7V5H9Z" /></svg>
-          <span>Music</span>
-        </a>
-      </li>
-      <li>
-        <a class="nav-link" href="#contact" aria-label="Contact">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm2.4 2 6.6 5 6.6-5H5.4ZM5 9.2V17h14V9.2l-7 5.3-7-5.3Z" /></svg>
-          <span>Contact</span>
-        </a>
-      </li>
+    <a class="nav-brand" href="#home" aria-label="Musaic home">
+      <span class="nav-logo-slot" data-logo-slot>
+        <img src="images/Mosaic Audio Logo Compact.svg" alt="" class="logo-img nav-logo-img" data-logo-img />
+        <span class="logo-fallback nav-logo-fallback" aria-hidden="true">M</span>
+      </span>
+      <span class="nav-brand-text">Musaic</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">Open navigation</span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" data-nav-link>Home</a></li>
+      <li><a href="#project-h" data-nav-link>Project H</a></li>
+      <li><a href="#systems" data-nav-link>Systems</a></li>
+      <li><a href="#loop" data-nav-link>Loop</a></li>
+      <li><a href="#music" data-nav-link>Music</a></li>
+      <li><a href="#contact" data-nav-link>Contact</a></li>
     </ul>
   </nav>
 
-  <main>
-    <section class="page-section hero-section" id="home" data-section="Project H">
-      <div class="section-inner hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Technical Sound Designer & Composer</p>
-          <h1>PROJECT H</h1>
-          <p class="hero-subtitle">Psychological Horror Investigation Game<br />Built in Unity + Wwise</p>
-          <p class="hero-text">
-            Sound is not background. Sound is the system. A first-person horror prototype where breathing, stress, light and adaptive audio shape player perception, tension and feedback.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#breakdown">Watch Breakdown</a>
-            <a class="button button-secondary" href="#systems">Explore Systems</a>
+  <main id="main">
+    <section class="section hero-section" id="home">
+      <div class="content-shell hero-layout">
+        <div class="hero-copy surface surface-main">
+          <p class="eyebrow">Cristian Giordano</p>
+
+          <div class="brand-logo-slot" data-logo-slot>
+            <img src="images/Mosaic Audio Logo.svg" alt="Musaic — Interactive Audio Systems" class="logo-img brand-logo-img" data-logo-img />
+            <div class="logo-fallback brand-logo-fallback" aria-hidden="true">
+              <span class="fallback-mark">M</span>
+              <span class="fallback-stack">
+                <strong>Musaic</strong>
+                <em>&lt; Interactive Audio Systems /&gt;</em>
+              </span>
+            </div>
           </div>
-          <ul class="tech-tags" aria-label="Project H technical tags">
-            <li>Unity</li>
-            <li>Wwise</li>
-            <li>C#</li>
-            <li>RTPCs</li>
-            <li>Adaptive Audio</li>
-            <li>Stress System</li>
-            <li>Breathing Feedback</li>
-          </ul>
+
+          <h1>Interactive audio systems for readable gameplay feedback.</h1>
+          <p class="hero-text">
+            I design gameplay audio systems that make tension, space, player states and interaction easier to read.
+          </p>
+
+          <div class="hero-actions" aria-label="Main actions">
+            <a class="btn btn-primary" href="#project-h">Explore Project H</a>
+            <a class="btn btn-secondary" href="#systems">View Systems</a>
+          </div>
         </div>
+
+        <aside class="case-card surface surface-accented">
+          <p class="eyebrow">Featured Case Study</p>
+          <h2>Project H</h2>
+          <p>
+            A Unity/Wwise psychological horror prototype where sound, stress, breathing and light become gameplay systems.
+          </p>
+          <div class="tag-row">
+            <span>Unity</span>
+            <span>Wwise</span>
+            <span>C#</span>
+            <span>RTPCs</span>
+            <span>Adaptive Audio</span>
+          </div>
+          <a class="inline-link" href="#project-h">Open case study <span aria-hidden="true">→</span></a>
+        </aside>
       </div>
     </section>
 
-    <section class="page-section breakdown-section" id="breakdown" data-section="Breakdown">
-      <div class="section-inner two-column">
-        <div class="section-copy">
-          <p class="eyebrow">Featured Technical Breakdown</p>
-          <h2>Project H — Stress, Breathing & Adaptive Audio</h2>
+    <section class="section project-section" id="project-h">
+      <div class="content-shell split-layout project-layout">
+        <div class="section-heading surface surface-main">
+          <p class="eyebrow">01 / Case Study</p>
+          <h2>Project H</h2>
           <p>
-            A short breakdown of how physiological feedback, Wwise RTPCs and gameplay states are used to make tension readable without relying on traditional UI.
+            A solo-developed prototype designed around audio-first production: modular environments, minimal visual exposition and systemic sound feedback.
           </p>
         </div>
 
-        <article class="video-card js-vimeo-card" data-vimeo-id="1206528311" aria-label="Play Project H technical breakdown">
-          <img src="images/ProjectHBreakdown.jpg" alt="Project H technical breakdown thumbnail" />
-          <div class="video-overlay">
-            <span class="play-badge">▶</span>
-            <div>
-              <p class="card-kicker">Watch now</p>
-              <h3>Technical Breakdown</h3>
-            </div>
-          </div>
+        <article class="video-card surface surface-video js-vimeo-card" data-vimeo-id="1206528311">
+          <button class="video-button" type="button" aria-label="Play Project H technical breakdown">
+            <span class="video-label">Featured technical breakdown</span>
+            <span class="video-title">Stress, Breathing & Adaptive Audio</span>
+            <span class="video-description">
+              A short breakdown of how physiological feedback, Wwise RTPCs and gameplay states make tension readable without traditional UI.
+            </span>
+            <span class="play-symbol" aria-hidden="true">▶</span>
+          </button>
           <div class="vimeo-frame" aria-hidden="true"></div>
         </article>
       </div>
     </section>
 
-    <section class="page-section systems-section" id="systems" data-section="Systems">
-      <div class="section-inner">
-        <div class="section-heading">
-          <p class="eyebrow">Sound Design Systems</p>
-          <h2>Gameplay audio as player feedback</h2>
-        </div>
+    <section class="section systems-section" id="systems">
+      <div class="content-shell">
+        <header class="section-kicker">
+          <p class="eyebrow">02 / Interactive Audio Systems</p>
+          <h2>Systems as modules.</h2>
+        </header>
 
-        <div class="systems-grid">
-          <article class="system-card">
-            <div class="system-icon" aria-hidden="true">01</div>
+        <div class="systems-grid" aria-label="Interactive audio system modules">
+          <article class="system-card surface card-large">
+            <span class="module-index">01</span>
             <h3>Adaptive Audio</h3>
-            <p>RTPC-driven audio systems connected to stress, breathing, environmental states and player feedback.</p>
+            <p>RTPC-driven feedback connected to stress, breathing, environmental states and player actions.</p>
           </article>
 
-          <article class="system-card">
-            <div class="system-icon" aria-hidden="true">02</div>
-            <h3>Stress & Breathing System</h3>
-            <p>A physiological feedback loop where stress affects breathing, heartbeat, filtering and visual perception.</p>
+          <article class="system-card surface card-tall">
+            <span class="module-index">02</span>
+            <h3>Stress & Breathing</h3>
+            <p>A physiological feedback loop where stress affects breathing, heartbeat, filtering and player perception.</p>
           </article>
 
-          <article class="system-card">
-            <div class="system-icon" aria-hidden="true">03</div>
-            <h3>Light & Emotional Exposure</h3>
-            <p>Warm light stabilizes the player, darkness increases exposure, and lighting becomes part of the gameplay loop.</p>
+          <article class="system-card surface card-small">
+            <span class="module-index">03</span>
+            <h3>Light & Exposure</h3>
+            <p>Warm light stabilizes the player, darkness increases exposure and lighting becomes part of the gameplay loop.</p>
           </article>
 
-          <article class="system-card">
-            <div class="system-icon" aria-hidden="true">04</div>
-            <h3>Event-Driven Gameplay Audio</h3>
-            <p>Unity events, Wwise States, Switches and modular systems connect player actions with real-time audio feedback.</p>
+          <article class="system-card surface card-wide">
+            <span class="module-index">04</span>
+            <h3>Event-Driven Audio</h3>
+            <p>Unity events, Wwise States, Switches and modular architecture connect actions with real-time feedback.</p>
           </article>
 
-          <article class="system-card system-card-wide">
-            <div class="system-icon" aria-hidden="true">05</div>
+          <article class="system-card surface surface-red card-red">
+            <span class="module-index">05</span>
             <h3>Audio-First Production Design</h3>
-            <p>Project H is designed as a solo-dev prototype where production constraints become part of the creative direction: modular environments, limited visual exposition and systemic feedback allow sound and light to carry the experience.</p>
+            <p>Project H turns solo-dev constraints into creative direction: limited animation, modular spaces and minimal visual exposition let sound and systemic feedback carry the experience.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="page-section loop-section" id="loop" data-section="Loop">
-      <div class="section-inner two-column reverse-mobile">
-        <div class="memory-panel">
-          <span class="memory-label">Vertical Slice</span>
-          <h2>Project H — Memory Investigation Loop</h2>
+    <section class="section loop-section" id="loop">
+      <div class="content-shell split-layout loop-layout">
+        <div class="section-heading surface surface-main">
+          <p class="eyebrow">03 / Vertical Slice</p>
+          <h2>Memory Investigation Loop</h2>
           <p>
-            The current vertical slice uses Robert's memory as a test case for the core experience: investigate who a person was, understand the main unresolved regret, solve multiple memory-based interactions, collect fragments and observe how the environment reacts after each discovery.
-          </p>
-          <p>
-            Each fragment pushes the space into a defensive reaction through audio, lighting, stress behavior and level state changes. The focus stays on what the player can read and do, not on explaining the hidden lore behind the world.
+            The current vertical slice follows Robert’s memory: the player investigates a life, identifies its central regret, solves memory-based interactions and watches the environment react after each discovered fragment.
           </p>
         </div>
 
-        <div class="memory-steps" aria-label="Project H memory investigation loop">
-          <button class="memory-step is-active" type="button" aria-expanded="true">
+        <div class="accordion surface" data-accordion>
+          <button class="accordion-item is-open" type="button" aria-expanded="true">
             <span>01</span>
             <strong>Enter the Memory</strong>
-            <small>The player enters a distorted space built around Robert's life, where architecture, objects, music and lighting replace direct exposition.</small>
+            <small>The player enters a distorted space built around Robert’s life, where architecture, objects, music and lighting replace direct exposition.</small>
           </button>
 
-          <button class="memory-step" type="button" aria-expanded="false">
+          <button class="accordion-item" type="button" aria-expanded="false">
             <span>02</span>
             <strong>Investigate the Person</strong>
-            <small>The player understands who Robert was through rooms, objects, documents, music, absence, repetition and contrast.</small>
+            <small>The player understands who Robert was through environmental storytelling: rooms, objects, documents, music, absence, repetition and contrast.</small>
           </button>
 
-          <button class="memory-step" type="button" aria-expanded="false">
+          <button class="accordion-item" type="button" aria-expanded="false">
             <span>03</span>
             <strong>Find Emotional Anchors</strong>
             <small>Key objects reveal what Robert desired, what connected him to others and what remained unresolved.</small>
           </button>
 
-          <button class="memory-step" type="button" aria-expanded="false">
+          <button class="accordion-item" type="button" aria-expanded="false">
             <span>04</span>
             <strong>Solve Memory-Based Puzzles</strong>
-            <small>Progression comes from understanding the memory. Each puzzle is tied to Robert's inner conflict rather than generic keys.</small>
+            <small>Each puzzle is tied to Robert’s inner conflict. Progression comes from understanding the memory, not from finding generic keys.</small>
           </button>
 
-          <button class="memory-step" type="button" aria-expanded="false">
+          <button class="accordion-item" type="button" aria-expanded="false">
             <span>05</span>
             <strong>Collect a Fragment</strong>
-            <small>Fragments are not generic collectibles. Each one represents a meaningful piece of the person's unresolved story.</small>
+            <small>Fragments are meaningful pieces of the person’s unresolved story, not generic collectibles.</small>
           </button>
 
-          <button class="memory-step" type="button" aria-expanded="false">
+          <button class="accordion-item" type="button" aria-expanded="false">
             <span>06</span>
             <strong>Memory Reaction</strong>
-            <small>After each fragment, the memory reacts defensively: audio, lighting, space and stress behavior change to show that something important has been disturbed.</small>
+            <small>After each fragment, the memory reacts defensively: audio, lighting, space and stress change to show that something important has been disturbed.</small>
           </button>
 
-          <button class="memory-step" type="button" aria-expanded="false">
+          <button class="accordion-item" type="button" aria-expanded="false">
             <span>07</span>
             <strong>Return to a Changed Hub</strong>
-            <small>The player returns to the central memory hub, now altered by what has been discovered, opening the next part of the investigation.</small>
+            <small>The player returns to the central hub, now altered by what has been discovered, opening the next part of the investigation.</small>
           </button>
         </div>
       </div>
     </section>
 
-    <section class="page-section music-section" id="music" data-section="Music">
-      <div class="section-inner">
-        <div class="section-heading align-left">
-          <p class="eyebrow">Music Composition</p>
-          <h2>Film Made Only By Music</h2>
-          <p>Cinematic composition, emotional pacing and storytelling through music.</p>
+    <section class="section music-section" id="music">
+      <div class="content-shell split-layout music-layout">
+        <div class="section-heading surface surface-main">
+          <p class="eyebrow">04 / Music Composition</p>
+          <h2>Structure, pacing, tension.</h2>
+          <p>
+            My music background informs the way I design systems: repetition, contrast, emotional pacing and narrative structure.
+          </p>
         </div>
 
-        <div class="music-feature">
-          <div>
-            <span class="card-kicker">Latest release</span>
+        <div class="music-panel surface">
+          <div class="album-head">
+            <span class="module-number">Film Made Only By Music</span>
             <h3>The Aftermath</h3>
-            <p>A story of love, betrayal and revenge told through cinematic electronic composition.</p>
+            <p>A story of love, betrayal and revenge told through cinematic composition.</p>
           </div>
 
-          <div class="ep-tracks">
-            <button class="liquid-player" data-src="songs/Act I - Love & Betrayal.mp3" type="button">
-              <span class="progress-fill"></span>
-              <span class="player-content">
-                <span class="track-title">01. Love & Betrayal</span>
-                <span class="track-time">0:00</span>
-              </span>
+          <div class="track-list">
+            <button class="track-player" type="button" data-src="songs/Act I - Love & Betrayal.mp3">
+              <span class="track-fill"></span>
+              <span class="track-content"><strong>01. Love & Betrayal</strong><em>0:00</em></span>
             </button>
-
-            <button class="liquid-player" data-src="songs/Act II - Vendetta.mp3" type="button">
-              <span class="progress-fill"></span>
-              <span class="player-content">
-                <span class="track-title">02. Vendetta</span>
-                <span class="track-time">0:00</span>
-              </span>
+            <button class="track-player" type="button" data-src="songs/Act II - Vendetta.mp3">
+              <span class="track-fill"></span>
+              <span class="track-content"><strong>02. Vendetta</strong><em>0:00</em></span>
             </button>
-
-            <button class="liquid-player" data-src="songs/Act III - The Aftermath.mp3" type="button">
-              <span class="progress-fill"></span>
-              <span class="player-content">
-                <span class="track-title">03. The Aftermath</span>
-                <span class="track-time">0:00</span>
-              </span>
+            <button class="track-player" type="button" data-src="songs/Act III - The Aftermath.mp3">
+              <span class="track-fill"></span>
+              <span class="track-content"><strong>03. The Aftermath</strong><em>0:00</em></span>
             </button>
           </div>
-        </div>
 
-        <div class="works-grid">
-          <article class="work-card">
-            <img src="images/After-all.jpg" alt="After All cover" />
-            <div>
-              <h3>After All</h3>
-              <p>Cinematic Ambient</p>
-              <a class="text-link" href="https://soundcloud.com/cristo-195950312/after-all" target="_blank" rel="noreferrer">SoundCloud →</a>
-            </div>
-          </article>
-
-          <article class="work-card">
-            <img src="images/The Aftermath.jpg" alt="The Aftermath cover" />
-            <div>
-              <h3>The Aftermath</h3>
-              <p>Electronic Ambient</p>
-              <a class="text-link" href="https://open.spotify.com/album/2VmMDqcngIB7MYCqgQv0XK?si=70bzD7PjRH6j_JoFsH__aA" target="_blank" rel="noreferrer">Spotify →</a>
-              <a class="text-link" href="https://soundcloud.com/cristo-195950312/sets/film-01-the-aftermath" target="_blank" rel="noreferrer">SoundCloud →</a>
-            </div>
-          </article>
+          <div class="external-row">
+            <a href="https://open.spotify.com/album/2VmMDqcngIB7MYCqgQv0XK?si=70bzD7PjRH6j_JoFsH__aA" target="_blank" rel="noreferrer">Spotify</a>
+            <a href="https://soundcloud.com/cristo-195950312/sets/film-01-the-aftermath" target="_blank" rel="noreferrer">SoundCloud</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="page-section contact-section" id="contact" data-section="Contact">
-      <div class="section-inner contact-grid">
-        <div class="profile-column">
-          <article class="identity-card">
-            <img src="images/IMG_5666.JPG" alt="Portrait of Cristian Giordano" />
-            <div>
-              <p class="identity-name">Cristian Giordano</p>
-              <p class="identity-role">Technical Sound Designer & Composer</p>
-            </div>
-          </article>
-
-          <article class="about-card">
-            <p class="eyebrow">About</p>
-            <h2>Cristian Giordano</h2>
-            <p>
-              I am a Technical Sound Designer & Composer focused on interactive audio, gameplay feedback and immersive systems.
-            </p>
-            <p>
-              My current work is Project H, a psychological horror prototype built in Unity and Wwise, where sound, breathing, stress and light are treated as gameplay systems.
-            </p>
-            <p>
-              My background in music composition helps me design audio with structure, emotional pacing and narrative intention.
-            </p>
-          </article>
+    <section class="section contact-section" id="contact">
+      <div class="content-shell contact-layout">
+        <div class="about-copy surface surface-main">
+          <p class="eyebrow">05 / About</p>
+          <h2>Cristian Giordano</h2>
+          <p>
+            Technical Sound Designer & Composer focused on interactive audio, gameplay feedback and immersive systems.
+          </p>
+          <p>
+            I work with Unity, Wwise and C# to design audio systems where sound communicates player state, attention, space and interaction.
+          </p>
         </div>
 
-        <article class="contact-card">
+        <aside class="profile-card surface surface-accented">
+          <div class="portrait-frame">
+            <img src="images/IMG_5666.JPG" alt="Portrait of Cristian Giordano" />
+          </div>
+          <div class="profile-details">
+            <h3>Technical Sound Designer & Composer</h3>
+            <p>Unity / Wwise / C# / Interactive Audio</p>
+          </div>
+        </aside>
+
+        <div class="contact-card surface surface-red">
           <p class="eyebrow">Contact</p>
-          <h2>Get in touch</h2>
-          <a class="contact-mail" href="mailto:cristian.giordano.1984sa@gmail.com">cristian.giordano.1984sa@gmail.com</a>
-
-          <div class="contact-meta">
-            <div>
-              <span>Current Location</span>
-              <strong>Barcelona, Catalunya</strong>
-            </div>
-            <div>
-              <span>Availability</span>
-              <strong><i class="status-dot"></i> Open to global opportunities</strong>
-            </div>
-            <div>
-              <span>Working Mode</span>
-              <strong>On-site / Hybrid / Remote</strong>
-            </div>
-            <div>
-              <span>Languages</span>
-              <strong>Italian native / English B2 / Spanish A2</strong>
-            </div>
+          <a class="contact-main" href="mailto:cristian.giordano.1984sa@gmail.com">cristian.giordano.1984sa@gmail.com</a>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/cristian-giordano/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://www.youtube.com/@Cristo-Art" target="_blank" rel="noreferrer">YouTube</a>
+            <a href="https://soundcloud.com/cristo-195950312" target="_blank" rel="noreferrer">SoundCloud</a>
+            <a href="https://open.spotify.com/artist/74koQvEl2bteoxiKAWKNn2" target="_blank" rel="noreferrer">Spotify</a>
+            <a href="CV/Cristian_Giordano_CV_ATS.pdf" target="_blank" rel="noreferrer">Download CV</a>
           </div>
-
-          <div class="social-links">
-            <a class="social-link" href="https://www.linkedin.com/in/cristian-giordano/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="social-link" href="https://www.youtube.com/@Cristo-Art" target="_blank" rel="noreferrer">YouTube</a>
-            <a class="social-link" href="https://soundcloud.com/cristo-195950312" target="_blank" rel="noreferrer">SoundCloud</a>
-            <a class="social-link" href="https://open.spotify.com/artist/74koQvEl2bteoxiKAWKNn2" target="_blank" rel="noreferrer">Spotify</a>
-          </div>
-
-          <a class="button button-primary cv-button" href="CV/Cristian_Giordano_Technical_Audio_Designer_CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
-        </article>
+        </div>
       </div>
     </section>
   </main>
 
-  <div class="video-modal" id="video-modal" aria-hidden="true">
-    <button class="modal-close" type="button" aria-label="Close video">×</button>
-    <div class="modal-frame" id="modal-frame"></div>
-  </div>
-
   <script src="main.js" defer></script>
 </body>
-
-</html>  
+</html>

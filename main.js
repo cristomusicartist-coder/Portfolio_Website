@@ -1,265 +1,179 @@
-const clickSound = new Audio("sounds/click.wav");
-clickSound.volume = 0.025;
+const body = document.body;
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+const navAnchors = [...document.querySelectorAll('[data-nav-link]')];
+const sections = [...document.querySelectorAll('section[id]')];
+const logoImages = [...document.querySelectorAll('[data-logo-img]')];
 
-function playClick() {
-  try {
-    clickSound.currentTime = 0;
-    clickSound.play().catch(() => {});
-  } catch (_) {}
-}
+logoImages.forEach((img) => {
+  const slot = img.closest('[data-logo-slot]');
+  const fallback = slot ? slot.querySelector('.logo-fallback') : null;
 
-function vibrate(pattern = 30) {
-  if (navigator.vibrate) navigator.vibrate(pattern);
-}
+  const showImage = () => {
+    img.classList.add('is-loaded');
+    if (fallback) fallback.style.display = 'none';
+  };
 
-const navLinks = [...document.querySelectorAll(".nav-link")];
-const sections = [...document.querySelectorAll(".page-section")];
+  const showFallback = () => {
+    img.classList.remove('is-loaded');
+    if (fallback) fallback.style.display = 'grid';
+  };
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    playClick();
-    vibrate(25);
-  });
+  img.addEventListener('load', showImage);
+  img.addEventListener('error', showFallback);
+
+  if (img.complete && img.naturalWidth > 0) showImage();
 });
 
-function pauseActiveTrack() {
-  if (!activeAudio.paused) activeAudio.pause();
-  if (activePlayer) activePlayer.classList.remove("is-playing");
-}
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!isOpen));
+    navLinks.classList.toggle('is-open', !isOpen);
+    body.classList.toggle('nav-open', !isOpen);
+  });
 
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-
-      const id = entry.target.getAttribute("id");
-
-      navLinks.forEach((link) => {
-        const isActive = link.getAttribute("href") === `#${id}`;
-        link.classList.toggle("is-active", isActive);
-      });
-
-      if (id !== "music") pauseActiveTrack();
+  navAnchors.forEach((link) => {
+    link.addEventListener('click', () => {
+      navToggle.setAttribute('aria-expanded', 'false');
+      navLinks.classList.remove('is-open');
+      body.classList.remove('nav-open');
     });
-  },
-  {
-    root: null,
-    threshold: 0.42,
-  }
-);
-
-sections.forEach((section) => sectionObserver.observe(section));
-
-function createVimeoIframe(videoId) {
-  return `
-    <iframe
-      src="https://player.vimeo.com/video/${videoId}?autoplay=1&title=0&byline=0&portrait=0"
-      allow="autoplay; fullscreen; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  `;
-}
-
-function hasUsableVideoId(videoId) {
-  return videoId && videoId.trim().length > 0 && !videoId.includes("PASTE");
-}
-
-const featuredVideoCards = document.querySelectorAll(".js-vimeo-card");
-
-featuredVideoCards.forEach((card) => {
-  card.addEventListener("click", () => {
-    const videoId = card.dataset.vimeoId;
-    if (!hasUsableVideoId(videoId)) return;
-
-    const frame = card.querySelector(".vimeo-frame");
-    if (!frame) return;
-
-    pauseActiveTrack();
-    frame.innerHTML = createVimeoIframe(videoId);
-    card.classList.add("is-playing");
-  });
-});
-
-const modal = document.getElementById("video-modal");
-const modalFrame = document.getElementById("modal-frame");
-const modalClose = document.querySelector(".modal-close");
-const videoTriggers = document.querySelectorAll(".js-video-trigger");
-
-function openVideoModal(videoId) {
-  if (!hasUsableVideoId(videoId) || !modal || !modalFrame) return;
-
-  pauseActiveTrack();
-  modalFrame.innerHTML = createVimeoIframe(videoId);
-  modal.classList.add("is-open");
-  modal.setAttribute("aria-hidden", "false");
-  document.body.style.overflow = "hidden";
-}
-
-function closeVideoModal() {
-  if (!modal || !modalFrame) return;
-
-  modal.classList.remove("is-open");
-  modal.setAttribute("aria-hidden", "true");
-  modalFrame.innerHTML = "";
-  document.body.style.overflow = "";
-}
-
-videoTriggers.forEach((trigger) => {
-  trigger.addEventListener("click", (event) => {
-    event.preventDefault();
-    playClick();
-    vibrate(25);
-
-    const videoId = trigger.dataset.vimeoId;
-    if (!hasUsableVideoId(videoId)) return;
-
-    openVideoModal(videoId);
-  });
-});
-
-if (modalClose) modalClose.addEventListener("click", closeVideoModal);
-
-if (modal) {
-  modal.addEventListener("click", (event) => {
-    if (event.target === modal) closeVideoModal();
   });
 }
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeVideoModal();
-});
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    const id = entry.target.getAttribute('id');
+    navAnchors.forEach((link) => {
+      link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
+    });
+  });
+}, { threshold: 0.38 });
 
-const memorySteps = [...document.querySelectorAll(".memory-step")];
+sections.forEach((section) => observer.observe(section));
 
-memorySteps.forEach((step) => {
-  step.addEventListener("click", () => {
-    const isAlreadyActive = step.classList.contains("is-active");
+const vimeoCards = [...document.querySelectorAll('.js-vimeo-card')];
 
-    memorySteps.forEach((item) => {
-      item.classList.remove("is-active");
-      item.setAttribute("aria-expanded", "false");
+vimeoCards.forEach((card) => {
+  const button = card.querySelector('.video-button');
+  const frame = card.querySelector('.vimeo-frame');
+  const videoId = card.dataset.vimeoId;
+
+  if (!button || !frame || !videoId) return;
+
+  button.addEventListener('click', () => {
+    stopMusic();
+    vimeoCards.forEach((otherCard) => {
+      if (otherCard === card) return;
+      otherCard.classList.remove('is-playing');
+      const otherFrame = otherCard.querySelector('.vimeo-frame');
+      if (otherFrame) {
+        otherFrame.innerHTML = '';
+        otherFrame.setAttribute('aria-hidden', 'true');
+      }
     });
 
-    if (!isAlreadyActive) {
-      step.classList.add("is-active");
-      step.setAttribute("aria-expanded", "true");
+    frame.innerHTML = `<iframe src="https://player.vimeo.com/video/${videoId}?autoplay=1&title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Project H technical breakdown"></iframe>`;
+    frame.setAttribute('aria-hidden', 'false');
+    card.classList.add('is-playing');
+  });
+});
+
+const accordionItems = [...document.querySelectorAll('.accordion-item')];
+
+accordionItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    const isOpen = item.classList.contains('is-open');
+    accordionItems.forEach((other) => {
+      other.classList.remove('is-open');
+      other.setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('is-open');
+      item.setAttribute('aria-expanded', 'true');
     }
-
-    playClick();
-    vibrate(25);
   });
 });
 
-const players = [...document.querySelectorAll(".liquid-player")];
-const activeAudio = new Audio();
+const trackPlayers = [...document.querySelectorAll('.track-player')];
+let activeAudio = new Audio();
 let activePlayer = null;
 
-function resetPlayerUI(player) {
-  if (!player) return;
-  player.classList.remove("is-playing");
-
-  const fill = player.querySelector(".progress-fill");
-  const time = player.querySelector(".track-time");
-
-  if (fill) fill.style.width = "0%";
-  if (time) time.textContent = "0:00";
+function stopMusic() {
+  if (!activeAudio.paused) activeAudio.pause();
+  if (activePlayer) activePlayer.classList.remove('is-playing');
 }
 
-function stopActiveTrack() {
-  activeAudio.pause();
-  activeAudio.removeAttribute("src");
-  activeAudio.load();
-  resetPlayerUI(activePlayer);
-  activePlayer = null;
-}
+trackPlayers.forEach((player) => {
+  const src = player.dataset.src;
+  const fill = player.querySelector('.track-fill');
 
-players.forEach((player) => {
-  const audioSrc = player.dataset.src;
-  let isDragging = false;
-  let pointerStartX = 0;
-
-  function seekFromPointer(clientX) {
-    if (activePlayer !== player || !activeAudio.duration) return;
-
-    const rect = player.getBoundingClientRect();
-    const x = clientX - rect.left;
-    const progress = Math.max(0, Math.min(1, x / rect.width));
-    activeAudio.currentTime = progress * activeAudio.duration;
-  }
-
-  player.addEventListener("pointerdown", (event) => {
-    isDragging = false;
-    pointerStartX = event.clientX;
-
-    const onPointerMove = (moveEvent) => {
-      if (Math.abs(moveEvent.clientX - pointerStartX) > 10) {
-        isDragging = true;
-        seekFromPointer(moveEvent.clientX);
+  player.addEventListener('click', () => {
+    vimeoCards.forEach((card) => {
+      card.classList.remove('is-playing');
+      const frame = card.querySelector('.vimeo-frame');
+      if (frame) {
+        frame.innerHTML = '';
+        frame.setAttribute('aria-hidden', 'true');
       }
-    };
-
-    const onPointerUp = () => {
-      window.removeEventListener("pointermove", onPointerMove);
-      window.removeEventListener("pointerup", onPointerUp);
-    };
-
-    window.addEventListener("pointermove", onPointerMove);
-    window.addEventListener("pointerup", onPointerUp);
-  });
-
-  player.addEventListener("click", () => {
-    if (isDragging) return;
-    if (!audioSrc) return;
-
-    playClick();
-    vibrate(40);
+    });
 
     if (activePlayer !== player) {
-      resetPlayerUI(activePlayer);
-      activeAudio.src = audioSrc;
+      if (activePlayer) {
+        activePlayer.classList.remove('is-playing');
+        const previousFill = activePlayer.querySelector('.track-fill');
+        if (previousFill) previousFill.style.width = '0%';
+      }
+      activeAudio.src = src;
       activePlayer = player;
-      player.classList.add("is-playing");
-      activeAudio.play().catch(() => {
-        resetPlayerUI(player);
-      });
+      player.classList.add('is-playing');
+      activeAudio.play().catch(() => {});
       return;
     }
 
     if (activeAudio.paused) {
-      activeAudio.play().then(() => {
-        player.classList.add("is-playing");
-      }).catch(() => {});
+      player.classList.add('is-playing');
+      activeAudio.play().catch(() => {});
     } else {
       activeAudio.pause();
-      player.classList.remove("is-playing");
+      player.classList.remove('is-playing');
     }
+  });
+
+  player.addEventListener('pointerdown', (event) => {
+    if (activePlayer !== player || !activeAudio.duration) return;
+    const rect = player.getBoundingClientRect();
+    const percentage = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
+    activeAudio.currentTime = percentage * activeAudio.duration;
+    if (fill) fill.style.width = `${percentage * 100}%`;
   });
 });
 
-activeAudio.addEventListener("timeupdate", () => {
+activeAudio.addEventListener('timeupdate', () => {
   if (!activePlayer || !activeAudio.duration) return;
-
-  const fill = activePlayer.querySelector(".progress-fill");
-  const time = activePlayer.querySelector(".track-time");
   const progress = (activeAudio.currentTime / activeAudio.duration) * 100;
-
+  const fill = activePlayer.querySelector('.track-fill');
+  const time = activePlayer.querySelector('em');
   if (fill) fill.style.width = `${progress}%`;
-
   if (time) {
-    const mins = Math.floor(activeAudio.currentTime / 60);
-    const secs = Math.floor(activeAudio.currentTime % 60);
-    time.textContent = `${mins}:${secs.toString().padStart(2, "0")}`;
+    const minutes = Math.floor(activeAudio.currentTime / 60);
+    const seconds = Math.floor(activeAudio.currentTime % 60).toString().padStart(2, '0');
+    time.textContent = `${minutes}:${seconds}`;
   }
 });
 
-activeAudio.addEventListener("ended", () => {
-  resetPlayerUI(activePlayer);
+activeAudio.addEventListener('ended', () => {
+  if (!activePlayer) return;
+  activePlayer.classList.remove('is-playing');
+  const fill = activePlayer.querySelector('.track-fill');
+  const time = activePlayer.querySelector('em');
+  if (fill) fill.style.width = '0%';
+  if (time) time.textContent = '0:00';
   activePlayer = null;
 });
 
-document.addEventListener("visibilitychange", () => {
-  if (document.hidden) {
-    closeVideoModal();
-    stopActiveTrack();
-  }
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) stopMusic();
 });
